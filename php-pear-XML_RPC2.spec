@@ -1,19 +1,19 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		XML
 %define		_subclass	RPC2
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	XML_RPC2
 
 Summary:	%{_pearname} - XML-RPC client/server library
 Summary(pl):	%{_pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{_pearname}
-Version:	0.0.7
+Version:	0.0.8
 Release:	1
 Epoch:		0
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	793672d64b01d4ab83469cdb42ae0a2d
+# Source0-md5:	dea059165327d3642a58635a98076f05
 URL:		http://pear.php.net/package/XML_RPC2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
