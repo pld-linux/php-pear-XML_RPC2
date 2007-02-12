@@ -5,7 +5,7 @@
 %define		_pearname	XML_RPC2
 
 Summary:	%{_pearname} - XML-RPC client/server library
-Summary(pl):	%{_pearname} - biblioteka XML-RPC typu klient-serwer
+Summary(pl.UTF-8):   %{_pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{_pearname}
 Version:	0.0.8
 Release:	1
@@ -40,23 +40,23 @@ procedures.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-XML_RPC2 to pakiet pear dostarczaj±cy us³ug typu klient-serwer.
+%description -l pl.UTF-8
+XML_RPC2 to pakiet pear dostarczajÄ…cy usÅ‚ug typu klient-serwer.
 
-XML-RPC to prosty protokó³ zdalnego wykonywania procedur (Remote
-Procedure Call, RPC) stworzony przy u¿yciu HTTP jako transportu i XML
-jako no¶nika danych.
+XML-RPC to prosty protokÃ³Å‚ zdalnego wykonywania procedur (Remote
+Procedure Call, RPC) stworzony przy uÅ¼yciu HTTP jako transportu i XML
+jako noÅ›nika danych.
 
-Jako biblioteka kliencka, XML_RPC2 potrafi stworzyæ klasê
-po¶rednicz±c± która ujawni metody eksportowane przez serwer. Jako
-biblioteka serwera, XML_RPC2 mo¿e eksportowaæ lokalne metody do
+Jako biblioteka kliencka, XML_RPC2 potrafi stworzyÄ‡ klasÄ™
+poÅ›redniczÄ…cÄ… ktÃ³ra ujawni metody eksportowane przez serwer. Jako
+biblioteka serwera, XML_RPC2 moÅ¼e eksportowaÄ‡ lokalne metody do
 zdalnie wykonywanych procedur.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -65,7 +65,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
