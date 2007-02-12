@@ -5,7 +5,7 @@
 %define		_pearname	XML_RPC2
 
 Summary:	%{_pearname} - XML-RPC client/server library
-Summary(pl.UTF-8):   %{_pearname} - biblioteka XML-RPC typu klient-serwer
+Summary(pl.UTF-8):	%{_pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{_pearname}
 Version:	0.0.8
 Release:	1
@@ -56,7 +56,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
