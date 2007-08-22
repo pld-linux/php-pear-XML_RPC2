@@ -7,13 +7,13 @@
 Summary:	%{_pearname} - XML-RPC client/server library
 Summary(pl.UTF-8):	%{_pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{_pearname}
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 Epoch:		0
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	fd0491942ee24a6c98672b6684506352
+# Source0-md5:	cdd1987c522c8ddbe7b8d5b2599d7781
 URL:		http://pear.php.net/package/XML_RPC2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
