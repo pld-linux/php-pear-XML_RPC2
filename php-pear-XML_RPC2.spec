@@ -8,7 +8,7 @@ Summary:	%{_pearname} - XML-RPC client/server library
 Summary(pl.UTF-8):	%{_pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{_pearname}
 Version:	1.0.2
-Release:	1
+Release:	2
 Epoch:		0
 License:	LGPL
 Group:		Development/Languages/PHP
