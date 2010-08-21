@@ -1,15 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		XML
-%define		_subclass	RPC2
 %define		_status		stable
 %define		_pearname	XML_RPC2
-
 Summary:	%{_pearname} - XML-RPC client/server library
 Summary(pl.UTF-8):	%{_pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{_pearname}
 Version:	1.0.5
-Release:	1
-Epoch:		0
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -18,11 +14,11 @@ URL:		http://pear.php.net/package/XML_RPC2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php(curl)
 Requires:	php-common >= 3:5.0.0
+Requires:	php-curl
 Requires:	php-pear
 Requires:	php-pear-Cache_Lite >= 1.6.0
-Requires:	php-pear-PEAR-core >= 1:1.0b1
+Requires:	php-pear-PEAR-core >= 1:1.0-0.b1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -59,9 +55,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoReq:	no
+Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
