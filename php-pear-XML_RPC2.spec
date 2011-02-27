@@ -1,17 +1,17 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		stable
 %define		_pearname	XML_RPC2
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - XML-RPC client/server library
 Summary(pl.UTF-8):	%{_pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{_pearname}
-Version:	1.0.6
+Version:	1.0.8
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	236ef652139be789ca4c4329c0e27631
+# Source0-md5:	a26c58ff60feecf209cb572903a44600
 URL:		http://pear.php.net/package/XML_RPC2/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:5.0.0
@@ -57,8 +57,6 @@ Ta klasa ma w PEAR status: %{_status}.
 
 # package dev tools
 rm .%{php_pear_dir}/data/XML_RPC2/Makefile
-rm .%{php_pear_dir}/data/XML_RPC2/util/filelist.sh
-rm .%{php_pear_dir}/data/XML_RPC2/util/indent.xsl
 
 %install
 rm -rf $RPM_BUILD_ROOT
