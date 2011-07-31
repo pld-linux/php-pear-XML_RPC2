@@ -1,23 +1,24 @@
-%define		_status		stable
-%define		_pearname	XML_RPC2
+%define		status		stable
+%define		pearname	XML_RPC2
 %include	/usr/lib/rpm/macros.php
-Summary:	%{_pearname} - XML-RPC client/server library
-Summary(pl.UTF-8):	%{_pearname} - biblioteka XML-RPC typu klient-serwer
-Name:		php-pear-%{_pearname}
-Version:	1.0.8
+Summary:	%{pearname} - XML-RPC client/server library
+Summary(pl.UTF-8):	%{pearname} - biblioteka XML-RPC typu klient-serwer
+Name:		php-pear-%{pearname}
+Version:	1.1.1
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	a26c58ff60feecf209cb572903a44600
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	40fb170ef74008c522df3ab809ce7abc
 URL:		http://pear.php.net/package/XML_RPC2/
-BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
+BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-common >= 3:5.0.0
 Requires:	php-curl
 Requires:	php-pear
 Requires:	php-pear-Cache_Lite >= 1.6.0
+Requires:	php-pear-HTTP_Request2 >= 0.6.0
 Requires:	php-pear-PEAR-core >= 1:1.0-0.b1
 Obsoletes:	php-pear-XML_RPC2-tests
 BuildArch:	noarch
@@ -36,7 +37,7 @@ XML_RPC2 is capable of exposing methods from a class or object
 instance, seamlessly exporting local methods as remotely callable
 procedures.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 XML_RPC2 to pakiet pear dostarczający usług typu klient-serwer.
@@ -50,13 +51,15 @@ pośredniczącą która ujawni metody eksportowane przez serwer. Jako
 biblioteka serwera, XML_RPC2 może eksportować lokalne metody do
 zdalnie wykonywanych procedur.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
 
 # package dev tools
 rm .%{php_pear_dir}/data/XML_RPC2/Makefile
+# junk
+rm .%{php_pear_dir}/data/XML_RPC2/run-tests.log
 
 %install
 rm -rf $RPM_BUILD_ROOT
