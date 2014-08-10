@@ -4,12 +4,12 @@
 Summary:	%{pearname} - XML-RPC client/server library
 Summary(pl.UTF-8):	%{pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{pearname}
-Version:	1.1.1
-Release:	3
+Version:	1.1.2
+Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	40fb170ef74008c522df3ab809ce7abc
+# Source0-md5:	bc37d9b321cfeba56a5b62856e36f141
 URL:		http://pear.php.net/package/XML_RPC2/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -18,7 +18,7 @@ Requires:	php(core) >= 5.0.0
 Requires:	php(curl)
 Requires:	php-pear
 Requires:	php-pear-Cache_Lite >= 1.6.0
-Requires:	php-pear-HTTP_Request2 >= 0.6.0
+Requires:	php-pear-HTTP_Request2 >= 2.0.0
 Requires:	php-pear-PEAR-core >= 1:1.0-0.b1
 Obsoletes:	php-pear-XML_RPC2-tests
 BuildArch:	noarch
@@ -56,10 +56,8 @@ Ta klasa ma w PEAR status: %{status}.
 %prep
 %pear_package_setup
 
-# package dev tools
-rm .%{php_pear_dir}/data/XML_RPC2/Makefile
-# junk
-rm .%{php_pear_dir}/data/XML_RPC2/run-tests.log
+mv .%{php_pear_dir}/tests/XML_RPC2/tests .
+mv docs/XML_RPC2/docs/* .
 
 %install
 rm -rf $RPM_BUILD_ROOT
