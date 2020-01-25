@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	XML_RPC2
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - XML-RPC client/server library
 Summary(pl.UTF-8):	%{pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{pearname}
