@@ -4,7 +4,7 @@ Summary:	%{pearname} - XML-RPC client/server library
 Summary(pl.UTF-8):	%{pearname} - biblioteka XML-RPC typu klient-serwer
 Name:		php-pear-%{pearname}
 Version:	1.1.4
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
